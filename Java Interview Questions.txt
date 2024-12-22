@@ -1,0 +1,50 @@
+-------------------------------------------------------------------------> JAVA INTERVIEW QUESTIONS <-------------------------------------------------------------------------------------------
+
+Q.1 What are the Java 8 Features?
+--> 
+1.Lambda Features :-
+	Purpose: Enables functional programming and simplifies the implementation of interfaces with a single abstract method (Functional Interfaces).
+	Syntax: (parameters) -> expression/body
+		
+		List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+		names.forEach(name -> System.out.println(name));
+	Benefits:
+		1.Reduces boilerplate code.
+		2.Simplifies event handling and iterations.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2.StreaM APIs :- 
+	Purpose: Simplifies processing of collections and large datasets.
+	Features:
+		1.Operations can be intermediate (e.g., filter, map) or terminal (e.g., collect, forEach).
+		2.Supports lazy evaluation and parallel processing.
+	Example:
+		List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+		List<Integer> squares = numbers.stream()
+                               		       .map(n -> n * n)
+                                               .collect(Collectors.toList());
+		System.out.println(squares);
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3.Functional Interface :- 
+	Definition: An interface with exactly one abstract method. Examples include Runnable, Callable, and Comparator.
+	New Interfaces:
+		Predicate<T>: Represents a condition (returns a boolean).
+		Function<T, R>: Maps a value of type T to R.
+		Consumer<T>: Performs an operation on T.
+		Supplier<T>: Supplies a value of T.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4.Optional :-
+	Purpose: Helps avoid NullPointerException by providing a container for nullable values.
+	e.g:- 
+	Optional<String> optional = Optional.ofNullable(getValue());
+	optional.ifPresent(System.out::println); // Prints value if present
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5.New Date & Time API :-
+	Purpose: Provides a more robust and immutable date-time API.
+	Classes:
+		-> LocalDate, LocalTime, LocalDateTime: Represent dates, times, and combined datetime.
+		-> Period, Duration: Represent time intervals.
+		-> DateTimeFormatter: Formats date-time objects.
+	Example:
+		LocalDate date = LocalDate.now();
+		System.out.println(date);
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
