@@ -48,3 +48,168 @@ Q.1 What are the Java 8 Features?
 		LocalDate date = LocalDate.now();
 		System.out.println(date);
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q.2 What are the 4 pillers/Concepts of Oops?
+->
+  1.Abstraction
+  2.Encapsulations
+  3.Inheritance
+  4.Polymorphism
+
+1.Abstraction : It is a process of hiding the implementation details 
+		and showing only fuctionality to the user.
+
+	Real World Examples:
+	
+	TV remote : To start TV, you have to press the power button, 
+		    you don't have to know about the internal circuit operations
+		    like how infrared waves are passing.
+
+	In Java, Abstraction can be achieved in two ways:
+		1.Abstract Class
+		2.Interfaces
+
+2.Encapsulation: It is process of Binding data and methods within a class. Think
+		of it like showing the essential deatils of a class by using access control 
+		modifiers(public,private,protected).
+	Example:
+		Java Bean,where all data members are made private and you define certain public
+		methods to the outside world to access them.
+
+
+3.Inheritance: Using inheritance means defining a parent-child relationship between
+			       classes,by doing so, you can reuse the code that is already defined in 
+			       parent class. Code reusability is the biggest advantage of Inheritance.
+				
+		               Java does not allow multiple inheritance through classes but it allows 
+			       it through interfaces.
+
+4.Polymorphism: Ploy means many and Morph means forms.
+		Polymorphism is the process in which an object or fuction takes differnt forms.
+		There are 2 types of Polymorphism:
+			1.Compile time Polymorphism(Method Overloading)
+			2.Run Time Polymorphism(Method overriding)
+
+		In Method overloading, two or more method i n one class have the same method name but
+		different arguments.It is called as Compile time polymorphism because it is decided at compile
+		time which overloaded method will be called.
+
+		Overriding means when we have twomethods with same name and same parameters in parent & child 
+		class.Through overriding, child class can provide specific implementation for the method which is already
+		defined in the parent class.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	1. Abstract Class:
+			An abstract class is a class that cannot be instantiated and can contain 
+			both abstract (unimplemented) methods and concrete (implemented) methods.
+
+	Features:
+		-> Use the abstract keyword.
+		-> Can have fields, constructors, and implemented methods.
+		-> Subclasses must provide implementations for the abstract methods unless they are abstract themselves.
+
+	Example:
+		Real-Life Example: Electronic Devices
+		
+		 code
+		abstract class ElectronicDevice {
+    			// Abstract method (no implementation)
+    			abstract void turnOn();
+    			abstract void turnOff();
+
+    		// Concrete method (implementation provided)
+   	 	void powerSupply() {
+       			 System.out.println("Device is connected to power.");
+   		 }
+	}
+
+		class Television extends ElectronicDevice {
+    			@Override
+    			void turnOn() {
+       				 System.out.println("Television is On.");
+    		}
+
+    			@Override
+    			void turnOff() {
+        			System.out.println("Television is Off.");
+    		}
+	}
+
+		class Radio extends ElectronicDevice {
+    			@Override
+    			void turnOn() {
+       				 System.out.println("Radio is On.");
+    		}
+
+    			@Override
+    			void turnOff() {
+        			System.out.println("Radio is Off.");
+    		}
+	}
+
+	public class Main {
+    	public static void main(String[] args) {
+        	
+		ElectronicDevice tv = new Television();
+        	tv.turnOn();
+        	tv.powerSupply();
+        	tv.turnOff();
+
+        	ElectronicDevice radio = new Radio();
+        	radio.turnOn();
+        	radio.powerSupply();
+        	radio.turnOff();
+    		}
+	}
+	Explanation:
+		The ElectronicDevice class defines a template with abstract methods 
+		(turnOn and turnOff) and a concrete method (powerSupply).
+		Subclasses Television and Radio provide specific implementations for the abstract methods.
+	
+	2. Interface:
+		An interface is a blueprint for a class that contains only method declarations 
+		(and default/static methods from Java 8 onwards). A class implementing the interface 
+		must provide implementations for all its methods.
+
+	Features:
+		Use the interface keyword.
+		Methods are implicitly public and abstract (except default and static methods).
+		A class can implement multiple interfaces (unlike inheritance, which is limited to one class).
+	
+	Example:
+		Real-Life Example: Payment System
+		
+		code:
+
+		interface Payment {
+    			void makePayment();
+		}
+
+		class CreditCardPayment implements Payment {
+    			@Override
+    			public void makePayment() {
+        			System.out.println("Payment made using Credit Card.");
+    		}
+	}
+
+		class PayPalPayment implements Payment {
+    			@Override
+    			public void makePayment() {
+        			System.out.println("Payment made using PayPal.");
+    		}
+	}
+
+		public class Main {
+    			public static void main(String[] args) {
+        			Payment payment1 = new CreditCardPayment();
+       				payment1.makePayment();
+
+        			Payment payment2 = new PayPalPayment();
+        			payment2.makePayment();
+    		}
+	}
+	Explanation:
+			The Payment interface defines the method makePayment.
+			CreditCardPayment and PayPalPayment classes implement the 
+			interface and provide their own implementations.
+
+	
