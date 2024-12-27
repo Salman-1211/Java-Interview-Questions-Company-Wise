@@ -47,7 +47,7 @@ Q.1 What are the Java 8 Features?
 	Example:
 		LocalDate date = LocalDate.now();
 		System.out.println(date);
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+=====================================================================================================================================================================================================================
 Q.2 What are the 4 pillers/Concepts of Oops?
 ->
   1.Abstraction
@@ -96,9 +96,9 @@ Q.2 What are the 4 pillers/Concepts of Oops?
 		Overriding means when we have twomethods with same name and same parameters in parent & child 
 		class.Through overriding, child class can provide specific implementation for the method which is already
 		defined in the parent class.
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+==============================================================================================================================================================================================================
 
-	1. Abstract Class:
+1. Abstract Class:
 			An abstract class is a class that cannot be instantiated and can contain 
 			both abstract (unimplemented) methods and concrete (implemented) methods.
 
@@ -164,8 +164,8 @@ Q.2 What are the 4 pillers/Concepts of Oops?
 		The ElectronicDevice class defines a template with abstract methods 
 		(turnOn and turnOff) and a concrete method (powerSupply).
 		Subclasses Television and Radio provide specific implementations for the abstract methods.
-	
-	2. Interface:
+=====================================================================================================================================================================================	
+2. Interface:
 		An interface is a blueprint for a class that contains only method declarations 
 		(and default/static methods from Java 8 onwards). A class implementing the interface 
 		must provide implementations for all its methods.
@@ -212,4 +212,44 @@ Q.2 What are the 4 pillers/Concepts of Oops?
 			CreditCardPayment and PayPalPayment classes implement the 
 			interface and provide their own implementations.
 
+======================================================================================================================================================================================	
+
+Q.4 Difference Between abstract class and interface?
+->   Key Differences: Abstract Class vs Interface
+------------------------------------------------------------------------------------------------------------------	
+	Feature		Abstract Class				Interface
+------------------------------------------------------------------------------------------------------------------
+	Usage		Used for a base class 			Used for a blueprint with only 
+			with shared state and behavior.		method declarations.
+		
+	Fields		Can have fields (including static 	Only static and final fields are allowed.
+			and final).	
+	Methods		Can have abstract and concrete 		Methods are abstract by 
+			methods.					default (except default and static).
+				
+	Multiple 	Not supported.				A class can implement multiple interfaces.
+	Inheritance		
 	
+	Constructors	Can have constructors.			Cannot have constructors.
+=========================================================================================================================================================================================
+Q.5 Difference Between == and equals ?
+-> 
+---------------------------------------------------------------------------------------------------------------------------------------------
+Comparison Aspect			== Operator			.equals() Method
+---------------------------------------------------------------------------------------------------------------------------------------------
+Comparison Basis		Checks if the memory addresses		Compares the content (values) 
+				of the objects are equal.		of the objects. 
+			
+Usage				Applicable to all data types.		Specifically designed for comparing objects, including strings.
+
+Comparison Result		Returns true if the objects have 	Returns true if the objects have the same content.
+				the same address.	
+
+String Content Comparison	Not suitable for comparing string 	Suitable for comparing string content.
+				content.	
+
+Object Content Comparison	Compares the object references, not 	Compares the content of the objects, considering their 
+				their content.					internal state.
+				
+
+Called as			== is considered an operator in Java.	Equals() is considered a method in Java.
