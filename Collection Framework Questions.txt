@@ -1,0 +1,26 @@
+1. What is the Java Collection Framework?
+Answer: The Java Collection Framework (JCF) is a unified architecture for managing groups of objects. 
+	It includes interfaces, classes, and algorithms to store, retrieve, and manipulate collections of objects efficiently.
+
+	Core Interfaces: Collection, List, Set, Queue, Deque, Map.
+	Key Classes: ArrayList, LinkedList, HashSet, TreeSet, PriorityQueue, HashMap, TreeMap.
+=========================================================================================================================================================================================
+2. What are the main interfaces in the Java Collection Framework?
+Answer:
+
+	1. Collection Interface: Root interface for most collections.
+
+				Sub-interfaces: List, Set, Queue, Deque.
+	2. List Interface: Ordered collection allowing duplicate elements.
+
+				Implementations: ArrayList, LinkedList, Vector.
+	3. Set Interface: Unordered collection without duplicates.
+
+				Implementations: HashSet, TreeSet, LinkedHashSet.
+	4. Queue Interface: FIFO structure.
+
+				Implementations: PriorityQueue, LinkedList.
+	5. Map Interface: Key-value pairs.
+
+				Implementations: HashMap, TreeMap, LinkedHashMap.
+==========================================================================================================================================================================================
