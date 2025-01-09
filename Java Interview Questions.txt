@@ -103,10 +103,11 @@ Q.2 What are the 4 pillers/Concepts of Oops?
 			both abstract (unimplemented) methods and concrete (implemented) methods.
 
 	Features:
-		-> Use the abstract keyword.
-		-> Can have fields, constructors, and implemented methods.
-		-> Subclasses must provide implementations for the abstract methods unless they are abstract themselves.
-
+		-> Can have both abstract and non-abstract methods.
+		-> Can include instance variables and constants.
+		-> Supports constructors.
+		-> Can extend only one class (abstract or concrete).
+		-> Used when classes share a common behavior that may include partial implementation.
 	Example:
 		Real-Life Example: Electronic Devices
 		
