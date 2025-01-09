@@ -171,9 +171,11 @@ Q.2 What are the 4 pillers/Concepts of Oops?
 		must provide implementations for all its methods.
 
 	Features:
-		Use the interface keyword.
-		Methods are implicitly public and abstract (except default and static methods).
-		A class can implement multiple interfaces (unlike inheritance, which is limited to one class).
+		-> Can have only abstract methods (prior to Java 8). Since Java 8, interfaces can include default and static methods.
+		-> All variables are implicitly public, static, and final.
+		-> Does not support constructors.
+ 		-> A class can implement multiple interfaces.
+		-> Used to achieve complete abstraction and to define a contract for implementing classes.
 	
 	Example:
 		Real-Life Example: Payment System
