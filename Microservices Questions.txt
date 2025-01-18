@@ -1,0 +1,24 @@
+----------------------------------------------> Microservices <--------------------------------------------------------
+
+Q.1 microservices vs monolithic, process to convert monolithic to microservices, 
+	connect sql db to microservice.
+-> 
+	# Microservices architecture is a distributed approach where each service 
+	  is independent and can be developed, deployed, and scaled separately.
+
+	# Monolithic architecture is a traditional approach where the entire 
+	  application is developed as a single unit.
+
+	# To convert a monolithic application to microservices, identify the 
+	  business capabilities and separate them into individual services.
+
+	# Use API gateways to manage communication between services 
+	  and implement fault tolerance and resiliency.
+
+	# To connect SQL DB to microservices, use a database per service approach 
+	  or a shared database approach with caution.
+
+	# In a database per service approach, each service has its own database, 
+	  while in a shared database approach, multiple services share a single database.
+
+	# Consider using a tool like Flyway or Liquibase for database migrations.
