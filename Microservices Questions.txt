@@ -22,3 +22,51 @@ Q.1 microservices vs monolithic, process to convert monolithic to microservices,
 	  while in a shared database approach, multiple services share a single database.
 
 	# Consider using a tool like Flyway or Liquibase for database migrations.
+===============================================================================================================================
+Q.2 Where did you used in web micro services in your project?
+-> 
+	# Web microservices were used extensively in my previous project.
+
+	# We used microservices architecture to break down the 
+	  monolithic application into smaller, independent services.
+
+	# Each microservice was responsible for a specific business function, 
+	  such as user authentication or payment processing.
+
+	# We used RESTful APIs to communicate between microservices and 
+	  implemented load balancing and fault tolerance.
+
+	# We also used containerization with Docker to deploy and manage 
+	  the microservices.
+
+	# Examples of microservices we used include user management, 
+	  payment processing, and inventory management.
+===================================================================================================================================
+Q.3 How microservices communicate?
+-> 
+	# Microservices communicate through lightweight protocols like HTTP, messaging queues, and RPC.
+
+	1. HTTP: RESTful APIs are commonly used for communication between microservices.
+
+	2. Messaging queues: Services can communicate asynchronously through 
+	   message brokers like RabbitMQ or Kafka.
+
+	3. RPC (Remote Procedure Call): Services can directly call each other's 
+	   functions over the network.
+=====================================================================================================================================
+Q.4 What are microservices?
+->
+	# Microservices are a software development technique where applications are broken down 
+	  into smaller, independent services that communicate with each other.
+	
+	# Microservices are small, independent services that work together to form a complete 
+	  application
+
+	# Each microservice is responsible for a specific function or feature
+
+	# Microservices communicate with each other through APIs
+
+	# They can be developed, deployed, and scaled independently
+
+	# Examples of companies using microservices include Netflix, Amazon, and Uber
+======================================================================================================================================
